@@ -17,3 +17,6 @@ Reports are merged using [MultiQC](https://multiqc.info/).
 
 ## Read mapping
 [BWA](http://bio-bwa.sourceforge.net/) MEM
+
+## Check mapping quality
+[Qualimap](http://qualimap.bioinfo.cipf.es/)
