@@ -20,3 +20,5 @@ Reports are merged using [MultiQC](https://multiqc.info/).
 
 ## Check mapping quality
 [Qualimap](http://qualimap.bioinfo.cipf.es/)
+
+## Variance calling
