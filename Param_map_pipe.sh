@@ -26,16 +26,16 @@ bwa index $RD/$Ref
 
 
 echo $File
-echo 'Remove adapters'
+# echo 'Remove adapters'
 # toggle -g to remove poly-G tails
-fastp --detect_adapter_for_pe --overrepresentation_analysis --correction --cut_right -g --thread 2 --html $File.fastp.html --json $File.fastp.json -i $File.R1.fastq.gz -I $File.R2.fastq.gz -o $File.R1_paired.fastq.gz -O $File.R2_paired.fastq.gz --unpaired1 $File.R1_unpaired.fastq.gz --unpaired2 $File.R2_unpaired.fastq.gz 
+# fastp --detect_adapter_for_pe --overrepresentation_analysis --correction --cut_right -g --thread 2 --html $File.fastp.html --json $File.fastp.json -i $File.R1.fastq.gz -I $File.R2.fastq.gz -o $File.R1_paired.fastq.gz -O $File.R2_paired.fastq.gz --unpaired1 $File.R1_unpaired.fastq.gz --unpaired2 $File.R2_unpaired.fastq.gz 
 
-echo 'Generate FastQC reports'
-fastqc $File.R1_paired.fastq.gz &
-fastqc $File.R2_paired.fastq.gz &
-fastqc $File.R1_unpaired.fastq.gz &
-fastqc $File.R2_unpaired.fastq.gz &
-wait
+# echo 'Generate FastQC reports'
+# fastqc $File.R1_paired.fastq.gz &
+# fastqc $File.R2_paired.fastq.gz &
+# fastqc $File.R1_unpaired.fastq.gz &
+# fastqc $File.R2_unpaired.fastq.gz &
+# wait
 
 gunzip $File.R1_paired.fastq.gz
 gunzip $File.R2_paired.fastq.gz
