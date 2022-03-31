@@ -23,12 +23,11 @@ do
     echo "#SBATCH --mail-type=ALL                                                          " >> ${line}_agave.sh
     echo "##SBATCH --mail-user=yue.hao@asu.edu   " >> ${line}_agave.sh          
     echo " " >> ${line}_agave.sh                                                
-    echo "./Param_kraken_pipe.sh ${line}" >> ${line}_agave.sh                   
+    echo "./Param_kraken_pipe.sh ${line}" >> ${line}_agave.sh
+ #  echo "./Param_map_pipe.sh " $line >> ${line}_agave.sh
                                                                                 
     chmod +x ${line}_agave.sh                                                   
                                                                                 
     sbatch ${line}_agave.sh                                                     
-                                                                                
-                                                                                
-                                                                                
+                                                                                                                                                                                                                                       
 done < $input 
