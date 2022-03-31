@@ -48,16 +48,16 @@ bwa mem -t 16 -M $Ref $File.R1_unpaired.fastq > $File.R1_unpaired.sam &
 bwa mem -t 16 -M $Ref $File.R2_unpaired.fastq > $File.R2_unpaired.sam &
 wait
 
-module load java
+module load java/latest
 
 echo 'Combine the SAM files using Picard'
-java -jar picard.jar MergeSamFiles I=$File.paired.sam I=$File.R1_unpaired.sam I=$File.R2_unpaired.sam O=$File.sam
+java -jar /home/yhao38/bin/picard.jar MergeSamFiles I=$File.paired.sam I=$File.R1_unpaired.sam I=$File.R2_unpaired.sam O=$File.sam
 
 echo 'Convert the SAM file to the BAM file using Samtools'
 samtools view -bS $File.sam > $File.bam
 
 echo 'Sort the BAM file using Picard'
-java -jar picard.jar SortSam INPUT=$File.bam OUTPUT=Sorted_$File.bam SORT_ORDER=coordinate
+java -jar /home/yhao38/bin/picard.jar SortSam INPUT=$File.bam OUTPUT=Sorted_$File.bam SORT_ORDER=coordinate
 
 echo 'Filter the BAM file using Samtools'
 samtools view -q 20 -f 3 -F 3844 -b Sorted_$File.bam > Filtered_Sorted_$File.bam
