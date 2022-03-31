@@ -19,9 +19,7 @@ do
     echo "#SBATCH -n 4                   " >> ${line}_agave.sh                  
     echo "#SBATCH --output=${line}_%j.out                                                       " >> ${line}_agave.sh
     echo "#SBATCH --error=${line}_%j.err                                                        " >> ${line}_agave.sh
-    echo "#SBATCH --time=2-00:00:00                                                        " >> ${line}_agave.sh
-    echo "#SBATCH --mail-type=ALL                                                          " >> ${line}_agave.sh
-    echo "##SBATCH --mail-user=yue.hao@asu.edu   " >> ${line}_agave.sh          
+    echo "#SBATCH --time=2-00:00:00                                                        " >> ${line}_agave.sh 
     echo " " >> ${line}_agave.sh                                                
     echo "./Param_kraken_pipe.sh ${line}" >> ${line}_agave.sh
  #  echo "./Param_map_pipe.sh " $line >> ${line}_agave.sh
