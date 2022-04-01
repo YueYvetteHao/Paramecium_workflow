@@ -1,12 +1,12 @@
 #!/bin/bash                                                                     
 
 # Required software:
-# fastp
-# fastqc
-# kraken2
-# bracken
-# krona
-# KrakenTools
+# fastp v0.21.0
+# fastQC v0.11.9
+# kraken2 v2.0.8-beta
+# bracken v2.6
+# krona v2.8.1
+# KrakenTools v1.2
 
 # Working directory
 cd /scratch/yhao38/Param_pop
