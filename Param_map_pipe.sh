@@ -22,7 +22,7 @@ Ref=$RD/biaurelia/V1-4/Paramecium_biaurelia+mt.fasta
 
 echo 'Build index for the reference genome'
 # only need to do once
-bwa index $RD/$Ref
+bwa index $Ref
 
 
 echo $File
