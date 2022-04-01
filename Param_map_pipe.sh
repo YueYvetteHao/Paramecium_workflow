@@ -3,12 +3,12 @@
 # Read mapping using BWA
 
 # Required software:
-# fastp
-# fastqc
-# bwa
-# picard
-# samtools
-# qualimap
+# fastp v0.21.0
+# fastQC v0.11.9
+# bwa v0.7.17-r1188
+# picard v2.25.0
+# samtools v1.12 (using htslib v1.12)
+# qualimap v2.2.1
 
 # Working directory
 cd /scratch/yhao38/Param_pop
